@@ -1,0 +1,21 @@
+[global_config]
+  window_state = fullscreen
+[keybindings]
+[profiles]
+  [[default]]
+    scrollbar_position = hidden
+    use_system_font = False
+    background_image = None
+    foreground_color = "#ffffff"
+    color_scheme = white_on_black
+    font = Source Code Pro 11
+    scrollback_infinite = True
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]
