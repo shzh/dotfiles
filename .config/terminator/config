@@ -1,14 +1,14 @@
 [global_config]
-  window_state = fullscreen
+  enabled_plugins = CustomCommandsMenu, TerminalShot, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  window_state = maximise
 [keybindings]
 [profiles]
   [[default]]
     scrollbar_position = hidden
-    use_system_font = False
     background_image = None
+    use_system_font = False
     foreground_color = "#ffffff"
     color_scheme = white_on_black
-    font = Source Code Pro 11
     scrollback_infinite = True
 [layouts]
   [[default]]

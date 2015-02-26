@@ -10,6 +10,14 @@ antigen bundle common-aliases
 antigen bundle heroku
 antigen bundle pip
 antigen bundle command-not-found
+antigen bundle coffee
+antigen bundle node
+antigen bundle npm
+antigen bundle gem
+antigen bundle ruby
+antigen bundle rvm
+antigen bundle rails
+antigen bundle virtualenvwrapper
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
