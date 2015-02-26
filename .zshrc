@@ -10,9 +10,6 @@ antigen bundle common-aliases
 antigen bundle heroku
 antigen bundle pip
 antigen bundle command-not-found
-antigen bundle coffee
-antigen bundle node
-antigen bundle npm
 antigen bundle gem
 antigen bundle ruby
 antigen bundle rvm
@@ -34,6 +31,5 @@ antigen apply
 export PATH="$PATH:/usr/local/heroku/bin"
 export PATH="$PATH:$HOME/.rvm/bin"
 source /home/szheng/.rvm/scripts/rvm
-source /usr/local/bin/activate.sh
 
 alias zshrc="vim ~/.zshrc"

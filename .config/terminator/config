@@ -5,10 +5,12 @@
 [profiles]
   [[default]]
     scrollbar_position = hidden
-    background_image = None
     use_system_font = False
+    background_image = None
     foreground_color = "#ffffff"
     color_scheme = white_on_black
+    font = Monospace 11
+    background_color = "#300a24"
     scrollback_infinite = True
 [layouts]
   [[default]]
