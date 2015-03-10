@@ -23,5 +23,12 @@ syntax enable
 
 " Set colorscheme
 set background=dark
+if !has('gui_running')
+    " Compatibility for Terminal
+    let g:solarized_termtrans=1
+
+    " Make Solarized use 16 colors for Terminal support
+    let g:solarized_termcolors=16
+endif
 colorscheme solarized
 

@@ -25,7 +25,7 @@ antigen theme robbyrussell
 # Autoenv
 antigen bundle kennethreitz/autoenv
 
-# Tell antigen that you're done.
+# Tell antigen that I'm done.
 antigen apply
 
 export PATH="$PATH:/usr/local/heroku/bin"
