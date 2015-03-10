@@ -7,10 +7,10 @@
     scrollbar_position = hidden
     use_system_font = False
     background_image = None
-    foreground_color = "#ffffff"
+    foreground_color = "#839496"
     color_scheme = white_on_black
     font = Monospace 11
-    background_color = "#300a24"
+    background_color = "#002b36"
     scrollback_infinite = True
 [layouts]
   [[default]]
