@@ -6,15 +6,15 @@ antigen use oh-my-zsh
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle debian
 antigen bundle git
-antigen bundle common-aliases
+#antigen bundle common-aliases
 antigen bundle heroku
 antigen bundle pip
-antigen bundle command-not-found
+#antigen bundle command-not-found
 antigen bundle gem
 antigen bundle ruby
 antigen bundle rvm
 antigen bundle rails
-antigen bundle virtualenvwrapper
+#antigen bundle virtualenvwrapper
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
@@ -23,7 +23,7 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen theme robbyrussell
 
 # Autoenv
-antigen bundle kennethreitz/autoenv
+#antigen bundle kennethreitz/autoenv
 
 # Tell antigen that I'm done.
 antigen apply
