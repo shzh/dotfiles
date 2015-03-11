@@ -6,7 +6,7 @@ antigen use oh-my-zsh
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle debian
 antigen bundle git
-#antigen bundle common-aliases
+antigen bundle common-aliases
 antigen bundle heroku
 antigen bundle pip
 #antigen bundle command-not-found
@@ -33,3 +33,5 @@ export PATH="$PATH:$HOME/.rvm/bin"
 source /home/szheng/.rvm/scripts/rvm
 
 alias zshrc="vim ~/.zshrc"
+alias vimrc="vim ~/.vimrc"
+
