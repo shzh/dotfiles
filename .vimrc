@@ -20,6 +20,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'groenewege/vim-less'
+Plugin 'jelera/vim-javascript-syntax'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
 Plugin 'klen/python-mode'
@@ -53,6 +54,9 @@ syntax on
 
 " Turn on syntax highlighting
 syntax enable
+
+" Turn on line numbering
+set number
 
 " Set colorscheme
 set background=dark
