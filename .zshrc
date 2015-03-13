@@ -1,3 +1,8 @@
+# Install Antigen if doesn't already exist
+if [ ! -f "~/.antigen/antigen/antigen.zsh" ]; then
+  git clone https://github.com/zsh-users/antigen.git ~/.antigen/antigen
+fi
+
 source ~/.antigen/antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
@@ -32,7 +37,7 @@ antigen apply
 export PATH="$PATH:/usr/local/heroku/bin"
 
 # RVM
-export PATH="$PATH:$HOME/.rvm/bin"
+export PATH="$PATH:~/.rvm/bin"
 source /home/szheng/.rvm/scripts/rvm
 
 # Aliases
