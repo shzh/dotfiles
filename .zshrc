@@ -1,4 +1,4 @@
-source ~/git/nonforked/antigen/antigen.zsh
+source ~/.antigen/antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
@@ -28,10 +28,14 @@ antigen theme robbyrussell
 # Tell antigen that I'm done.
 antigen apply
 
+# Add heroku to path
 export PATH="$PATH:/usr/local/heroku/bin"
+
+# RVM
 export PATH="$PATH:$HOME/.rvm/bin"
 source /home/szheng/.rvm/scripts/rvm
 
-alias zshrc="vim ~/.zshrc"
-alias vimrc="vim ~/.vimrc"
+# Aliases
+alias zshconfig="vim ~/.zshrc"
+alias vimconfig="vim ~/.vimrc"
 
