@@ -1,4 +1,9 @@
-source ~/git/nonforked/antigen/antigen.zsh
+# Install Antigen if doesn't already exist
+if [ ! -f "$HOME/.antigen/antigen/antigen.zsh" ]; then
+  git clone https://github.com/zsh-users/antigen.git $HOME/.antigen/antigen
+fi
+
+source $HOME/.antigen/antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
