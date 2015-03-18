@@ -18,6 +18,7 @@ call vundle#begin()
 " Plugins
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
+Plugin 'flazz/vim-colorschemes'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'groenewege/vim-less'
 Plugin 'jelera/vim-javascript-syntax'
@@ -35,10 +36,6 @@ Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-ruby/vim-ruby'
-
-" Color schemes
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'tomasr/molokai'
 
 call vundle#end()
 
@@ -60,11 +57,20 @@ set number
 
 " Set colorscheme
 set background=dark
-if !has('gui_running')
-    " Compatibility for Terminal
-    let g:solarized_termtrans=1
-endif
-colorscheme solarized
+set t_Co=256
+" Solarized
+"if !has('gui_running')
+    "" Compatibility for Terminal
+    "let g:solarized_termtrans=1
+"endif
+"colorscheme solarized
+
+" Molokai
+"let g:molokai_original=1
+"colorscheme molokai
+
+" Zenburn
+colorscheme zenburn
 
 " Airline
 set noshowmode

@@ -1,3 +1,6 @@
+# 256 color support
+export TERM=xterm-256color
+
 # Install Antigen if doesn't already exist
 if [ ! -f "$HOME/.antigen/antigen/antigen.zsh" ]; then
   git clone https://github.com/zsh-users/antigen.git $HOME/.antigen/antigen
