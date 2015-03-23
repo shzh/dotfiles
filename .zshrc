@@ -40,8 +40,8 @@ antigen apply
 export PATH="$PATH:/usr/local/heroku/bin"
 
 # RVM
-export PATH="$PATH:$HOME/.rvm/bin"
-source /home/szheng/.rvm/scripts/rvm
+#export PATH="$PATH:$HOME/.rvm/bin"
+#source /home/szheng/.rvm/scripts/rvm
 
 # Aliases
 alias zshconfig="vim ~/.zshrc"
