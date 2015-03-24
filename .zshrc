@@ -17,7 +17,7 @@ antigen bundle git
 antigen bundle common-aliases
 antigen bundle heroku
 antigen bundle pip
-#antigen bundle command-not-found
+antigen bundle command-not-found
 antigen bundle gem
 antigen bundle ruby
 antigen bundle rvm

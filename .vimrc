@@ -78,5 +78,13 @@ set laststatus=2
 let g:airline_powerline_fonts=1
 
 "
-set tabstop=4
+set autoindent
+set ts=4 sts=4 sw=4
+
+" In many terminal emulators the mouse works just fine, thus enable it.
+if has('mouse')
+  set mouse=a
+endif
+
+set hlsearch
 
