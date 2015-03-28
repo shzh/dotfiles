@@ -1,6 +1,18 @@
 # 256 color support
 export TERM=xterm-256color
 
+# Set up local user binary directory
+if [ ! -d ~/.bin ]; then
+  mkdir ~/.bin
+fi
+export PATH="$PATH:$HOME/.bin"
+
+# Install Leiningen if doesn't already exist
+if [ ! -f ~/.bin/lein ]; then
+  curl -o ~/.bin/lein https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
+  chmod a+x ~/.bin/lein
+fi
+
 # Install Antigen if doesn't already exist
 if [ ! -f "$HOME/.antigen/antigen/antigen.zsh" ]; then
   git clone https://github.com/zsh-users/antigen.git $HOME/.antigen/antigen
