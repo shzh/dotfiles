@@ -1,7 +1,0 @@
-[user]
-	name = Shuo Zheng
-	email = shuo.s.zheng@gmail.com
-[push]
-	default = simple
-[credential]
-	helper = cache
