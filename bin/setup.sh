@@ -3,7 +3,7 @@
 
 # Set up symbolic links
 DOTFILESPATH=$( cd $(dirname $0)/.. ; pwd -P )
-DOTFILES=(vimrc zshrc gitconfig)
+DOTFILES=(vimrc zshrc gitconfig tmux.conf)
 
 for dotfile in "${DOTFILES[@]}" ; do
   if [ -L ~/.$dotfile ] ; then
