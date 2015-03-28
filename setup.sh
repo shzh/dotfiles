@@ -1,9 +1,16 @@
-#!/bin/sh
+#!/bin/bash
 # Set up zsh if not already exists
 
 # Set up symbolic links
-ln -s ~/git/config/.vimrc ~/.vimrc
-ln -s ~/git/config/.zshrc ~/.zshrc
-ln -s ~/git/config/.config/terminator/config ~/.config/terminator/config
-ln -s ~/git/config/.gitconfig ~/.gitconfig
+SCRIPTPATH=$( cd $(dirname $0) ; pwd -P )
+DOTFILES=(.vimrc .zshrc .gitconfig)
+
+for dotfile in "${DOTFILES[@]}" ; do
+  if [ -L ~/$dotfile ] ; then
+    rm -fv ~/$dotfile
+  elif [ -e ~/$dotfile ] ; then
+    mv -fv ~/$dotfile ~/$dotfile.bak
+  fi
+  ln -s $SCRIPTPATH/$dotfile ~/$dotfile
+done
 
