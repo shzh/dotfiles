@@ -24,16 +24,21 @@ source $HOME/.antigen/antigen/antigen.zsh
 antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen bundle debian
-antigen bundle git
+antigen bundle brew
+antigen bundle coffee
+#antigen bundle command-not-found
 antigen bundle common-aliases
+#antigen bundle debian
+#antigen bundle gem
+antigen bundle git
 antigen bundle heroku
+antigen bundle lein
+antigen bundle osx
 antigen bundle pip
-antigen bundle command-not-found
-antigen bundle gem
-antigen bundle ruby
-antigen bundle rvm
-antigen bundle rails
+antigen bundle python
+#antigen bundle rails
+#antigen bundle ruby
+#antigen bundle rvm
 #antigen bundle virtualenvwrapper
 
 # Syntax highlighting bundle.

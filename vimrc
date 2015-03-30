@@ -17,8 +17,7 @@ call vundle#begin()
 
 " Plugins
 Plugin 'airblade/vim-gitgutter'
-Plugin 'bling/vim-airline'
-Plugin 'flazz/vim-colorschemes'
+"Plugin 'bling/vim-airline'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'groenewege/vim-less'
 Plugin 'guns/vim-clojure-static'
@@ -38,6 +37,10 @@ Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-ruby/vim-ruby'
+
+" Colorschemes
+Plugin 'altercation/vim-colors-solarized'
+"Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()
 
@@ -60,24 +63,31 @@ set number
 " Set colorscheme
 set background=dark
 set t_Co=256
+
 " Solarized
-"if !has('gui_running')
-    "" Compatibility for Terminal
-    "let g:solarized_termtrans=1
-"endif
-"colorscheme solarized
+if !has('gui_running')
+	" Compatibility for Terminal
+	let g:solarized_termtrans=1
+endif
+let g:solarized_termcolors=256
+colorscheme solarized
 
 " Molokai
 "let g:molokai_original=1
 "colorscheme molokai
 
 " Zenburn
-colorscheme zenburn
+"colorscheme zenburn
 
 " Airline
-set noshowmode
-set laststatus=2
-let g:airline_powerline_fonts=1
+"set noshowmode
+"set laststatus=2
+"let g:airline_powerline_fonts=1
+
+" Powerline
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
 
 "
 set autoindent
@@ -88,5 +98,6 @@ if has('mouse')
   set mouse=a
 endif
 
+set incsearch
 set hlsearch
 
