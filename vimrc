@@ -85,11 +85,6 @@ colorscheme solarized
 "set laststatus=2
 "let g:airline_powerline_fonts=1
 
-" Powerline
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
-
 "
 set autoindent
 set ts=4 sts=4 sw=4
