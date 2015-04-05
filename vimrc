@@ -80,11 +80,6 @@ colorscheme solarized
 " Zenburn
 "colorscheme zenburn
 
-" Airline
-"set noshowmode
-"set laststatus=2
-"let g:airline_powerline_fonts=1
-
 "
 set autoindent
 set ts=4 sts=4 sw=4
