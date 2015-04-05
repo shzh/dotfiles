@@ -24,9 +24,9 @@ antigen bundle lein
 antigen bundle osx
 antigen bundle pip
 antigen bundle python
-#antigen bundle rails
-#antigen bundle ruby
-#antigen bundle rvm
+antigen bundle rails
+antigen bundle ruby
+antigen bundle rbenv
 #antigen bundle virtualenvwrapper
 
 # Syntax highlighting bundle.
@@ -44,11 +44,14 @@ antigen apply
 # Add heroku to path
 export PATH="$PATH:/usr/local/heroku/bin"
 
-# RVM
-#export PATH="$PATH:$HOME/.rvm/bin"
-#source /home/szheng/.rvm/scripts/rvm
+# Set up rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# Homebrew recommendation
+export PATH="/usr/local/sbin:$PATH"
 
 # Aliases
-alias zshconfig="vim ~/.zshrc"
+alias tmuxconfig="vim ~/.tmux.conf"
 alias vimconfig="vim ~/.vimrc"
+alias zshconfig="vim ~/.zshrc"
 
