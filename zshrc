@@ -50,6 +50,9 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # Homebrew recommendation
 export PATH="/usr/local/sbin:$PATH"
 
+# Don't ever use graphical ssh dialog boxes such as gnome-ssh-askpass
+unset SSH_ASKPASS
+
 # Aliases
 alias tmuxconfig="vim ~/.tmux.conf"
 alias vimconfig="vim ~/.vimrc"
