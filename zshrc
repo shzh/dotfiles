@@ -25,8 +25,8 @@ antigen bundle osx
 antigen bundle pip
 antigen bundle python
 antigen bundle rails
-antigen bundle ruby
 antigen bundle rbenv
+antigen bundle ruby
 #antigen bundle virtualenvwrapper
 
 # Syntax highlighting bundle.

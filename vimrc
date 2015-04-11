@@ -18,6 +18,7 @@ call vundle#begin()
 " Plugins
 Plugin 'airblade/vim-gitgutter'
 "Plugin 'bling/vim-airline'
+Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'groenewege/vim-less'
 Plugin 'guns/vim-clojure-static'
@@ -58,9 +59,6 @@ syntax on
 " Turn on syntax highlighting
 syntax enable
 
-" Turn on line numbering
-set number
-
 " Set colorscheme
 set background=dark
 set t_Co=256
@@ -73,10 +71,6 @@ endif
 let g:solarized_termcolors=256
 colorscheme solarized
 
-" Molokai
-"let g:molokai_original=1
-"colorscheme molokai
-
 " Zenburn
 "colorscheme zenburn
 
@@ -85,15 +79,49 @@ colorscheme solarized
 "set laststatus=2
 "let g:airline_powerline_fonts=1
 
-"
-set autoindent
-set ts=4 sts=4 sw=4
-
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
   set mouse=a
 endif
 
+if has('persistent_undo')
+  set undodir=~/.vim/undodir
+  set undofile
+  set undolevels=1000
+  set undoreload=10000
+endif
+
+" Search settings
 set incsearch
 set hlsearch
+set ignorecase
+
+" Editor environment
+set number
+set scrolljump=5
+set scrolloff=3
+set autoindent
+set nowrap
+set shiftwidth=2
+set expandtab
+set tabstop=2
+set softtabstop=2
+
+" Move down to wrapped line instead of next line
+noremap j gj
+noremap k gk
+
+" More natural splitting
+set splitbelow
+set splitright
+
+" Easier window split jumps
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+
+" Map to use system clipboard
+map <leader>y "+y
+map <leader>p "+p
 
