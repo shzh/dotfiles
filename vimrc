@@ -85,11 +85,15 @@ if has('mouse')
 endif
 
 if has('persistent_undo')
-  set undodir=~/.vim/undodir
+  set undodir=~/.vim/undo
   set undofile
   set undolevels=1000
   set undoreload=10000
 endif
+
+" Put backups and swap files elsewhere so no annoyance from git status
+set backupdir=~/.vim/backup
+set directory=~/.vim/swp
 
 " Search settings
 set incsearch
