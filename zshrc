@@ -1,5 +1,5 @@
-# 256 color support
-export TERM=xterm-256color
+## 256 color support
+#export TERM=xterm-256color
 
 # Install Antigen if doesn't already exist
 if [ ! -f "$HOME/.antigen/antigen/antigen.zsh" ]; then
@@ -12,12 +12,11 @@ source $HOME/.antigen/antigen/antigen.zsh
 antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen bundle bundler
 antigen bundle brew
 antigen bundle coffee
-#antigen bundle command-not-found
 antigen bundle common-aliases
-#antigen bundle debian
-#antigen bundle gem
+antigen bundle gem
 antigen bundle git
 antigen bundle heroku
 antigen bundle lein
@@ -27,7 +26,7 @@ antigen bundle python
 antigen bundle rails
 antigen bundle rbenv
 antigen bundle ruby
-#antigen bundle virtualenvwrapper
+antigen bundle virtualenvwrapper
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
@@ -58,3 +57,11 @@ alias tmuxconfig="vim ~/.tmux.conf"
 alias vimconfig="vim ~/.vimrc"
 alias zshconfig="vim ~/.zshrc"
 
+### LESS ###
+# Enable syntax-highlighting in less.
+# brew install source-highlight
+LESSPIPE=`which src-hilite-lesspipe.sh`
+export LESSOPEN="| ${LESSPIPE} %s"
+export LESS=" -R "
+alias less='less -m -N -g -i -J --underline-special --SILENT'
+alias more='less'

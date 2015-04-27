@@ -16,17 +16,18 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " Plugins
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'airblade/vim-gitgutter'
-"Plugin 'bling/vim-airline'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'gmarik/Vundle.vim'
+Plugin 'godlygeek/tabular'
 Plugin 'groenewege/vim-less'
 Plugin 'guns/vim-clojure-static'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
-"Plugin 'klen/python-mode'
 Plugin 'pangloss/vim-javascript'
+Plugin 'plasticboy/vim-markdown'
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim'}
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
@@ -37,7 +38,7 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'vim-latex/vim-latex'
 Plugin 'vim-ruby/vim-ruby'
 
 " Colorschemes
@@ -79,6 +80,9 @@ colorscheme solarized
 "set laststatus=2
 "let g:airline_powerline_fonts=1
 
+" Italicize comments
+highlight Comment cterm=italic
+
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
   set mouse=a
@@ -105,11 +109,12 @@ set number
 set scrolljump=5
 set scrolloff=3
 set autoindent
-set nowrap
 set shiftwidth=2
 set expandtab
 set tabstop=2
 set softtabstop=2
+set nofoldenable
+set eol
 
 " Move down to wrapped line instead of next line
 noremap j gj
@@ -120,6 +125,8 @@ set splitbelow
 set splitright
 
 " Easier window split jumps
+" first unmap <C-j>
+let g:C_Ctrl_j = 'off'
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
@@ -128,4 +135,10 @@ nnoremap <C-l> <C-w>l
 " Map to use system clipboard
 map <leader>y "+y
 map <leader>p "+p
+
+" To allow coffee syntax highlighting in iioscript
+au BufRead,BufNewFile *.iio setfiletype coffee
+
+" gitgutter turn off column coloring
+highlight clear SignColumn
 
