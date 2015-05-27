@@ -26,6 +26,7 @@ Plugin 'guns/vim-clojure-static'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
+Plugin 'luochen1990/rainbow'
 Plugin 'pangloss/vim-javascript'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim'}
@@ -38,7 +39,7 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
-Plugin 'vim-latex/vim-latex'
+"Plugin 'vim-latex/vim-latex'
 Plugin 'vim-ruby/vim-ruby'
 
 " Colorschemes
@@ -142,3 +143,9 @@ au BufRead,BufNewFile *.iio setfiletype coffee
 " gitgutter turn off column coloring
 highlight clear SignColumn
 
+" Enable rainbow parentheses
+let g:rainbow_active=1
+
+if has('nvim')
+  let g:python_host_prog="usr/local/bin/python"
+endif

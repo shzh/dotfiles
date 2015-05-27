@@ -65,3 +65,4 @@ export LESSOPEN="| ${LESSPIPE} %s"
 export LESS=" -R "
 alias less='less -m -N -g -i -J --underline-special --SILENT'
 alias more='less'
+
