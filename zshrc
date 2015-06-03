@@ -12,21 +12,27 @@ source $HOME/.antigen/antigen/antigen.zsh
 antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen bundle bundler
+# Core
 antigen bundle brew
-antigen bundle coffee
 antigen bundle common-aliases
-antigen bundle gem
 antigen bundle git
 antigen bundle heroku
-antigen bundle lein
 antigen bundle osx
-antigen bundle pip
-antigen bundle python
-antigen bundle rails
-antigen bundle rbenv
-antigen bundle ruby
-antigen bundle virtualenvwrapper
+
+# Clojure stuff
+#antigen bundle lein
+
+# Ruby stuff
+#antigen bundle gem
+#antigen bundle bundler
+#antigen bundle rails
+#antigen bundle rbenv
+#antigen bundle ruby
+
+# Python stuff
+#antigen bundle pip
+#antigen bundle python
+#antigen bundle virtualenvwrapper
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
@@ -44,7 +50,7 @@ antigen apply
 export PATH="$PATH:/usr/local/heroku/bin"
 
 # Set up rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+#if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Homebrew recommendation
 export PATH="/usr/local/sbin:$PATH"
@@ -65,4 +71,11 @@ export LESSOPEN="| ${LESSPIPE} %s"
 export LESS=" -R "
 alias less='less -m -N -g -i -J --underline-special --SILENT'
 alias more='less'
+
+# Display system information on start
+if command -v archey >/dev/null 2>&1; then
+  archey -c
+else
+  echo "Please install archey for system information."
+fi
 
