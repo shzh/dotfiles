@@ -16,7 +16,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " Plugins
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'gmarik/Vundle.vim'
@@ -32,6 +32,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim'}
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
+Plugin 'terryma/vim-expand-region'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-fugitive'
@@ -133,9 +134,25 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
+" Remap <leader> to SPACE
+let mapleader = "\<Space>"
+
 " Map to use system clipboard
-map <leader>y "+y
-map <leader>p "+p
+vmap <Leader>y "+y
+vmap <Leader>d "+d
+nmap <Leader>p "+p
+nmap <Leader>P "+P
+vmap <Leader>p "+p
+vmap <Leader>P "+P
+
+" Remap to allow cursor to be end of pasted
+vnoremap <silent> y y`]
+vnoremap <silent> p p`]
+nnoremap <silent> p p`]
+
+" Helpful for selecting regions
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
 
 " To allow coffee syntax highlighting in iioscript
 au BufRead,BufNewFile *.iio setfiletype coffee
@@ -146,6 +163,3 @@ highlight clear SignColumn
 " Enable rainbow parentheses
 let g:rainbow_active=1
 
-if has('nvim')
-  let g:python_host_prog="usr/local/bin/python"
-endif

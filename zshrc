@@ -66,3 +66,10 @@ export LESS=" -R "
 alias less='less -m -N -g -i -J --underline-special --SILENT'
 alias more='less'
 
+# Display system information on start
+if command -v archey >/dev/null 2>&1; then
+  archey -c
+else
+  echo "Please install archey for system information."
+fi
+
