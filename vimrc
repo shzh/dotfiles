@@ -1,4 +1,4 @@
-" Set up Vundle if not already on machine
+"Set up Vundle if not already on machine
 let haveVundle=1
 let vundle_readme=expand('~/.vim/bundle/Vundle.vim/README.md')
 if !filereadable(vundle_readme)
@@ -16,7 +16,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " Plugins
-"Plugin 'Valloric/YouCompleteMe'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'gmarik/Vundle.vim'
@@ -40,12 +39,12 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
-"Plugin 'vim-latex/vim-latex'
 Plugin 'vim-ruby/vim-ruby'
 
 " Colorschemes
-Plugin 'altercation/vim-colors-solarized'
-"Plugin 'flazz/vim-colorschemes'
+"Plugin 'altercation/vim-colors-solarized'
+"Plugin 'jnurmine/Zenburn'
+Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()
 
