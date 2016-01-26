@@ -26,6 +26,7 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
 Plugin 'luochen1990/rainbow'
+Plugin 'moll/vim-node'
 Plugin 'pangloss/vim-javascript'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim'}
