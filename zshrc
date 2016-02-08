@@ -52,9 +52,6 @@ export PATH="$PATH:/usr/local/heroku/bin"
 # Set up rbenv
 #if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-# Homebrew recommendation
-export PATH="/usr/local/sbin:$PATH"
-
 # Don't ever use graphical ssh dialog boxes such as gnome-ssh-askpass
 unset SSH_ASKPASS
 
@@ -72,3 +69,7 @@ alias zshconfig="vim ~/.zshrc"
 #alias less='less -m -N -g -i -J --underline-special --SILENT'
 #alias more='less'
 
+# Homebrew recommendation
+export PATH="/usr/local/sbin:$PATH"
+
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
