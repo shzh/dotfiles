@@ -3,7 +3,7 @@
 
 # Set up symbolic links
 DOTFILESPATH=$( cd $(dirname $0)/.. ; pwd -P )
-DOTFILES=(vimrc zshrc tmux.conf spacemacs)
+DOTFILES=(vimrc zshrc tmux.conf spacemacs taskrc)
 
 for dotfile in "${DOTFILES[@]}" ; do
   if [ -L ~/.$dotfile ] ; then
