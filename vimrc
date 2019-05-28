@@ -31,7 +31,6 @@ Plugin 'luochen1990/rainbow'
 Plugin 'moll/vim-node'
 Plugin 'pangloss/vim-javascript'
 Plugin 'plasticboy/vim-markdown'
-Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim'}
 Plugin 'rust-lang/rust.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'

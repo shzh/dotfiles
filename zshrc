@@ -73,3 +73,5 @@ alias zshconfig="vim ~/.zshrc"
 export PATH="/usr/local/sbin:$PATH"
 
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
