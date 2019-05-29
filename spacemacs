@@ -33,13 +33,8 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(
-     ;; ----------------------------------------------------------------
-     ;; Example of useful layers you may want to use right away.
-     ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
-     ;; `M-m f e R' (Emacs style) to install them.
-     ;; ----------------------------------------------------------------
-     auto-completion
+   '(auto-completion
+     clojure
      ;; better-defaults
      emacs-lisp
      git
@@ -52,8 +47,8 @@ This function should only modify configuration layer settings."
      osx
      python
      (shell :variables
-                   shell-default-height 30
-                   shell-default-position 'bottom)
+            shell-default-height 30
+            shell-default-position 'bottom)
      shell-scripts
      syntax-checking
      treemacs
