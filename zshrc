@@ -79,3 +79,4 @@ if which jenv > /dev/null;
        eval "$(jenv init -)"
 fi
 
+source <(kubectl completion zsh)
