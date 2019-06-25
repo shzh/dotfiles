@@ -1,3 +1,6 @@
+autoload -Uz compinit
+compinit
+
 ## 256 color support
 #export TERM=xterm-256color
 
@@ -13,10 +16,8 @@ antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 # Core
-antigen bundle brew
 antigen bundle common-aliases
 antigen bundle git
-antigen bundle heroku
 antigen bundle osx
 
 # Clojure stuff
@@ -40,25 +41,12 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 # Load the theme.
 antigen theme robbyrussell
 
-# Autoenv
-#antigen bundle kennethreitz/autoenv
-
 # Tell antigen that I'm done.
 antigen apply
 
-# Add heroku to path
-export PATH="$PATH:/usr/local/heroku/bin"
-
-# Set up rbenv
-#if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Don't ever use graphical ssh dialog boxes such as gnome-ssh-askpass
 unset SSH_ASKPASS
-
-# Aliases
-alias tmuxconfig="vim ~/.tmux.conf"
-alias vimconfig="vim ~/.vimrc"
-alias zshconfig="vim ~/.zshrc"
 
 ### LESS ###
 # Enable syntax-highlighting in less.
@@ -80,3 +68,4 @@ if which jenv > /dev/null;
 fi
 
 source <(kubectl completion zsh)
+

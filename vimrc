@@ -103,7 +103,7 @@ endif
 
 " Put backups and swap files elsewhere so no annoyance from git status
 set backupdir=~/.vim/backup
-set directory=~/.vim/swp
+set directory=~/.vim/swap
 
 " Search settings
 set incsearch
